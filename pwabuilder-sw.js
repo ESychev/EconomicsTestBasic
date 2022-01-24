@@ -2,6 +2,7 @@
 
 const CACHE = "pwabuilder-offline-page";
 
+
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
@@ -57,14 +58,6 @@ self.addEventListener('fetch', (event) => {
 
 const CACHE = "pwabuilder-offline";
 const QUEUE_NAME = "bgSyncQueue";
-
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-
-self.addEventListener("message", (event) => {
-    if (event.data && event.data.type === "SKIP_WAITING") {
-        self.skipWaiting();
-    }
-});
 
 const bgSyncPlugin = new workbox.backgroundSync.BackgroundSyncPlugin(QUEUE_NAME, {
     maxRetentionTime: 24 * 60 // Retry for max of 24 Hours (specified in minutes)
