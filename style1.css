@@ -393,6 +393,21 @@ footer button.show {
     background: #007bff;
 }
 
+.btn {
+    display: inline-block;
+    /* Строчно-блочный элемент */
+    background: #8C959D;
+    /* Серый цвет фона */
+    color: #fff;
+    /* Белый цвет текста */
+    padding: 1rem 1.5rem;
+    /* Поля вокруг текста */
+    text-decoration: none;
+    /* Убираем подчёркивание */
+    border-radius: 3px;
+    /* Скругляем уголки */
+}
+
 @media (min-width: 350px) and (max-width: 459px) {
     .name_app {
         font-size: 20px;
