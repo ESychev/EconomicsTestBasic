@@ -29,7 +29,6 @@
     <!-- <script src="./pwabuilder-sw.js"></script> -->
 
     <title>Тест для самоподготовки учащихся по учебному предмету «Основы экономики»</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="./style1.css">
     <script src="https://use.fontawesome.com/4ca20d00e4.js"></script>
@@ -47,11 +46,11 @@
     <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
 </head>
-<header> <a href="./author.html" class="btn">Об авторах</a>
-    <button class="add-button">Add to home screen</button></header>
+<header>
+    <!-- <button class="add-button">Add to home screen</button></header> -->
 
-<body>
-    <style>
+    <body>
+        <!-- <style>
         .add-button {
             position: absolute;
             top: 1px;
@@ -61,7 +60,7 @@
     <script>
         let deferredPrompt;
         const addBtn = document.querySelector('.add-button');
-        addBtn.style.display = 'none';
+        // addBtn.style.display = 'none';
 
         window.addEventListener('beforeinstallprompt', (e) => {
             // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -87,78 +86,80 @@
                 });
             });
         });
-    </script>
-    <h3 class="name_app">
-        Тест для самоподготовки учащихся по учебному предмету «Основы экономики»
-    </h3>
-    </nav>
+    </script> -->
+
+        <h3 class="name_app">
+            Мобильное приложение «Тест для самоподготовки учащихся по предмету «Основы экономики»
+        </h3>
+        <div class="container">
 
 
-    <!-- start Quiz button -->
-    <div class="start_btn"><button>Начать</button></div>
-    <!-- Info Box -->
-    <div class="info_box">
-        <div class="info-title"><span>Контроль знании</span></div>
-        <div class="info-list">
-            <div class="info">1. У вас будет только <span>15 секунд</span> на каждый вопрос</div>
-            <div class="info">2. После того, как вы выберете свой ответ, его нельзя будет отменить.</div>
-            <div class="info">3. Вы не можете выбрать какой-либо вариант, когда время истечет.</div>
-            <div class="info">4. Вы получите баллы за правильные ответы.</div>
-        </div>
-        <div class="buttons">
-            <button class="quit">Выйти</button>
-            <button class="restart">Продолжить</button>
-        </div>
-    </div>
-
-    <!-- Quiz Box -->
-    <div class="quiz_box">
-        <header>
-            <div class="title">Контроль знании</div>
-            <div class="timer">
-                <div class="time_left_txt">Осталось</div>
-                <div class="timer_sec">15</div>
+            <!-- start Quiz button -->
+            <div class="start_btn"><button>Начать</button></div>
+            <!-- Info Box -->
+            <div class="info_box">
+                <div class="info-title"><span>Контроль знании</span></div>
+                <div class="info-list">
+                    <div class="info">1. У вас будет только <span>15 секунд</span> на каждый вопрос</div>
+                    <div class="info">2. После того, как вы выберете свой ответ, его нельзя будет отменить.</div>
+                    <div class="info">3. Вы не можете выбрать какой-либо вариант, когда время истечет.</div>
+                    <div class="info">4. Вы получите баллы за правильные ответы.</div>
+                </div>
+                <div class="buttons">
+                    <button class="quit">Выйти</button>
+                    <button class="restart">Продолжить</button>
+                </div>
             </div>
-            <div class="time_line"></div>
-        </header>
-        <section>
-            <div class="que_text">
-                <!-- Here I've inserted question from JavaScript -->
+
+            <!-- Quiz Box -->
+            <div class="quiz_box">
+                <header>
+                    <div class="title">Контроль знании</div>
+                    <div class="timer">
+                        <div class="time_left_txt">Осталось</div>
+                        <div class="timer_sec">15</div>
+                    </div>
+                    <div class="time_line"></div>
+                </header>
+                <section>
+                    <div class="que_text">
+                        <!-- Here I've inserted question from JavaScript -->
+                    </div>
+                    <div class="option_list">
+                        <!-- Here I've inserted options from JavaScript -->
+                    </div>
+                </section>
+
+                <!-- footer of Quiz Box -->
+                <footer>
+                    <div class="total_que">
+                        <!-- Here I've inserted Question Count Number from JavaScript -->
+                    </div>
+                    <button class="next_btn">Следующий</button>
+                </footer>
             </div>
-            <div class="option_list">
-                <!-- Here I've inserted options from JavaScript -->
+
+            <!-- Result Box -->
+            <div class="result_box">
+                <div class="icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="complete_text">Вы прошли тест</div>
+                <div class="score_text">
+                    <!-- Here I've inserted Score Result from JavaScript -->
+                </div>
+                <div class="buttons">
+                    <button class="restart">Повторить</button>
+                    <button class="quit">Выйти</button>
+                </div>
             </div>
-        </section>
-
-        <!-- footer of Quiz Box -->
-        <footer>
-            <div class="total_que">
-                <!-- Here I've inserted Question Count Number from JavaScript -->
-            </div>
-            <button class="next_btn">Следующий</button>
-        </footer>
-    </div>
-
-    <!-- Result Box -->
-    <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
         </div>
-        <div class="complete_text">Вы прошли тест</div>
-        <div class="score_text">
-            <!-- Here I've inserted Score Result from JavaScript -->
-        </div>
-        <div class="buttons">
-            <button class="restart">Повторить</button>
-            <button class="quit">Выйти</button>
-        </div>
-    </div>
+        <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+        <script src="./questions.js"></script>
 
-    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <script src="./questions.js"></script>
-
-    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="./script.js"></script>
-</body>
+        <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+        <script src="./script.js"></script>
+        <footer class="footer">Авторы: Сычев Евгений Анатольевич, Авдейчик Любовь Викторовна.</footer>
+    </body>
 
 </html>

@@ -9,16 +9,33 @@
 }
 
 body {
-    background: url(./image/fon.jpg)
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* width: 200%; */
+    height: 100vh;
+    background: url(./image/fon.jpg)no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 .name_app {
-    margin-bottom: 40px;
+    /* margin-bottom: 100px; */
     color: #F74902;
     margin-left: 10px;
     margin-right: 10px;
     text-align: center;
     font-weight: 700;
+}
+
+.container_content {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
 }
 
 ::selection {
@@ -409,6 +426,16 @@ footer button.show {
 }
 
 @media (min-width: 350px) and (max-width: 459px) {
+    body {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        /* width: 200%; */
+        height: 120vh;
+        background: url(./image/fon.jpg)no-repeat center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
     .name_app {
         font-size: 20px;
         margin-bottom: 40px;
@@ -419,14 +446,14 @@ footer button.show {
         font-weight: 400;
     }
     .info_box {
-        width: 240px;
+        max-width: 300px;
         background: rgb(240, 165, 5);
         border-radius: 5px;
         transform: translate(-50%, -50%) scale(0.9);
         opacity: 0;
         pointer-events: none;
         transition: all 0.3s ease;
-        margin-top: 150px;
+        margin-top: 120px;
     }
     .info_box .info-title {
         height: 15px;
@@ -440,14 +467,15 @@ footer button.show {
         font-weight: 600;
     }
     .quiz_box {
-        width: 310px;
+        max-width: 360px;
         background: rgb(240, 165, 5);
         border-radius: 5px;
         transform: translate(-50%, -50%) scale(0.9);
         opacity: 0;
         pointer-events: none;
         transition: all 0.3s ease;
-        margin-top: 220px;
+        margin-top: 180px;
+        overflow: auto;
     }
     .quiz_box header {
         /* position: relative; */
@@ -520,8 +548,18 @@ footer button.show {
 }
 
 @media (min-width: 460px) and (max-width: 759px) {
+    body {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        /* width: 200%; */
+        height: 140vh;
+        background: url(./image/fon.jpg)no-repeat center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
     .info_box {
-        width: 340px;
+        max-width: 340px;
         background: rgb(240, 165, 5);
         border-radius: 5px;
         transform: translate(-50%, -50%) scale(0.9);
@@ -542,7 +580,7 @@ footer button.show {
         font-weight: 600;
     }
     .quiz_box {
-        width: 350px;
+        max-width: 400px;
         background: rgb(240, 165, 5);
         border-radius: 5px;
         transform: translate(-50%, -50%) scale(0.9);
@@ -550,6 +588,7 @@ footer button.show {
         pointer-events: none;
         transition: all 0.3s ease;
         margin-top: 70px;
+        overflow: auto;
     }
     .quiz_box header {
         position: relative;
@@ -577,7 +616,7 @@ footer button.show {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 130px;
+        max-width: 130px;
     }
     .quiz_box header .timer .time_left_txt {
         font-weight: 400;
@@ -622,6 +661,16 @@ footer button.show {
 }
 
 @media (min-width: 760px) and (max-width: 950px) {
+    body {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        /* width: 200%; */
+        height: 150vh;
+        background: url(./image/fon.jpg)no-repeat center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
     .info_box {
         width: 440px;
         background: rgb(240, 165, 5);
